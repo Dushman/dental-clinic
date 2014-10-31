@@ -1,0 +1,251 @@
+/*-------------- Reset --------------*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video{
+  margin:0;
+  padding:0;
+  border:0 none;
+  font:inherit;
+  vertical-align:baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section{
+  display:block;
+}
+
+ol, ul{
+  list-style: none;
+  margin:0;
+  padding:0;
+  clear:both;
+}
+
+blockquote, q{
+  quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after{
+  content:'';
+  content:none;
+}
+
+table{
+  border-collapse:collapse;
+  border-spacing:0;
+}
+
+img {
+  max-width:100%;
+  vertical-align:bottom;
+  border:0;
+} 
+
+figure{margin:0;}
+
+p{margin:0 0 1em 0; line-height:1.5em;}
+
+input, 
+textarea, 
+select{outline:0 none;}
+
+a:link {
+  background:transparent;
+  text-decoration:underline;
+  color:#46a6f8;
+}
+
+a:hover{text-decoration:none;}
+
+a:active,
+a:hover,
+a:focus,
+a:visited {
+  outline:0 none;
+}
+
+/*------------- Helpers -------------*/
+
+.clearfix, 
+.clearfix:after{
+  content:" ";
+  visibility:hidden;
+  display:block;
+  height:0;
+  clear:both;
+}
+
+.f-left{float:left;}
+
+.f-right{float:right;}
+
+.oh{overflow:hidden;}
+
+.w-half{width:50%;}
+
+.a-center{text-align:center;}
+
+/*--------------- Fonts -------------*/
+
+@font-face {
+  font-family: 'pf_agora_sans_proregular';
+  src: url('fonts/pfagorasanspro-reg-webfont.eot');
+  src: url('fonts/pfagorasanspro-reg-webfont.eot?#iefix') format('embedded-opentype'),
+       url('fonts/pfagorasanspro-reg-webfont.woff2') format('woff2'),
+       url('fonts/pfagorasanspro-reg-webfont.woff') format('woff'),
+       url('fonts/pfagorasanspro-reg-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'pf_agora_serif_probold';
+  src: url('fonts/pfagoraserifpro-bold-webfont.eot');
+  src: url('fonts/pfagoraserifpro-bold-webfont.eot?#iefix') format('embedded-opentype'),
+       url('fonts/pfagoraserifpro-bold-webfont.woff2') format('woff2'),
+       url('fonts/pfagoraserifpro-bold-webfont.woff') format('woff'),
+       url('fonts/pfagoraserifpro-bold-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'pf_agora_serif_promedium';
+  src: url('fonts/pfagoraserifpro-medium-webfont.eot');
+  src: url('fonts/pfagoraserifpro-medium-webfont.eot?#iefix') format('embedded-opentype'),
+       url('fonts/pfagoraserifpro-medium-webfont.woff2') format('woff2'),
+       url('fonts/pfagoraserifpro-medium-webfont.woff') format('woff'),
+       url('fonts/pfagoraserifpro-medium-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'Glyphter';
+    src: url('fonts/Glyphter.eot');
+    src: url('fonts/Glyphter?#iefix') format('embedded-opentype'),
+         url('fonts/Glyphter.woff') format('woff'),
+         url('fonts/Glyphter.ttf') format('truetype'),
+         url('fonts/Glyphter.svg#Glyphter') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*---------- Main styles ------------*/
+
+html * {
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  box-sizing:border-box;
+}
+
+html{height:100%;}
+
+body{
+  font-size:100%;
+  -ms-text-size-adjust:100%;
+  -webkit-text-size-adjust:100%;
+  line-height:100%;
+  min-height:100%;
+  background-color:#fff;
+  color:#848e8f;
+  font-family: 'pf_agora_sans_proregular';
+}
+
+#wrapper{
+  background-color:#fff;
+  -webkit-box-shadow:0 0 6px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow:0 0 6px rgba(0, 0, 0, 0.5);
+  box-shadow:0 0 6px rgba(0, 0, 0, 0.5);
+  margin:0 auto;
+  max-width:1600px;
+  min-width:1000px;
+  overflow:hidden;
+  clear:both;
+}
+
+.section{
+  position:relative;
+  overflow:hidden;
+  clear:both;
+}
+
+.section-inn{
+  display:table;
+  position:relative;
+  width:960px;
+  margin:0 auto;
+}
+
+/*-------------- Header --------------*/
+
+/*---------------- Map ---------------*/
+
+.map-wrapper{
+  position:relative;
+  overflow:hidden;
+  clear:both;
+  height:560px;
+}
+
+#map_canvas{
+  width:100%;
+  height:100%;
+  z-index:1;
+  background-color:#fff!important;
+  margin:0;
+  padding:0;
+  z-index:1;
+}
+
+#map_canvas img{max-width:none;}
+
+.gmnoprint{display:none;}
+
+.map-info{
+  position:absolute;
+  left:0;
+  top:0;
+  z-index:2;
+  min-height:560px;
+  overflow:hidden;
+  padding:90px 60px 40px 320px;
+  background:rgba(133,208,185,.85);
+}
+
+.map-info ul{overflow:hidden;}
+
+.map-info ul:first-child{margin-bottom:50px;}
+
+.map-info ul li{
+  color:#fff;
+  font:normal 16px/26px 'pf_agora_serif_promedium';
+}
+
+.map-info ul li:first-child{
+  font-size:20px;
+  font-family: 'pf_agora_serif_probold';
+  padding-bottom:10px;
+}
+
+.map-info ul li a{
+  color:#fff;
+  text-decoration:none;
+}
+
+.map-info ul li a:hover{text-decoration:underline;}
+
+/*-------------- Footer --------------*/
+
