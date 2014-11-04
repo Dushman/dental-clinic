@@ -59,10 +59,12 @@ p{margin:0 0 1em 0; line-height:1.5em;}
 
 input, 
 textarea, 
-select,
+select, 
+button, 
 input:focus, 
 textarea:focus, 
-select:focus{outline:0 none;}
+select:focus, 
+button:focus{outline:0 none;}
 
 a:link {
   background:transparent;
