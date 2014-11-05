@@ -328,6 +328,18 @@ header .bottom-block span[data-target="#reception-block"]{
   padding:0 27px;
   border-radius:5px;
   background-color:#f2771f;
+  -webkit-transition:background-color .4s ease-in-out;
+  -moz-transition:background-color .4s ease-in-out;
+  transition:background-color .4s ease-in-out;
+}
+
+header .bottom-block span[data-target="#reception-block"]:hover{background-color:#fb8632;}
+
+header .bottom-block span[data-target="#reception-block"]:active{
+  background-color:#e46a13;
+  -webkit-box-shadow:0 -3px 0 #bc5105;
+  -moz-box-shadow:0 -3px 0 #bc5105;
+  box-shadow:0 -3px 0 #bc5105;
 }
 
 #top-slider-wrap{
@@ -347,7 +359,13 @@ header a.slider-nav{
   z-index:4;
   font-family: 'Glyphter';
   font-size:18px;
+  opacity:.6;
+  -webkit-transition:opacity .4s ease-in-out;
+  -moz-transition:opacity .4s ease-in-out;
+  transition:opacity .4s ease-in-out;
 }
+
+header a.slider-nav:hover{opacity:1;}
 
 header a.film_roll_prev{right:30px;}
 
@@ -426,6 +444,19 @@ a.orange-btn{
   letter-spacing:2px;
 }
 
+a.orange-btn:hover{
+  color:#fff;
+  background-color:#f2771f;
+}
+
+a.orange-btn:active{
+  color:#fff;
+  background-color:#f2771f;
+  -webkit-box-shadow:0 -3px 0 #bc5105;
+  -moz-box-shadow:0 -3px 0 #bc5105;
+  box-shadow:0 -3px 0 #bc5105;
+}
+
 /*-------------- Reviews -------------*/
 
 #reviews-block{
@@ -455,7 +486,13 @@ a.orange-btn{
   z-index:4;
   font-family: 'Glyphter';
   font-size:18px;
+  opacity:.6;
+  -webkit-transition:opacity .4s ease-in-out;
+  -moz-transition:opacity .4s ease-in-out;
+  transition:opacity .4s ease-in-out;
 }
+
+.list-of-reviews-wrap a.slider-nav:hover{opacity:1;}
 
 .list-of-reviews-wrap a.film_roll_prev{left:0;}
 
@@ -590,9 +627,17 @@ a.orange-btn{
   position:relative;
 }
 
+.review-form .btn-wrap .send-btn:hover{
+  color:#5ed1af;
+  background-color:#fff;
+}
+
 .review-form .btn-wrap .send-btn:active{
-  top:1px;
-  left:1px;
+  color:#5ed1af;
+  background-color:#fff;
+  -webkit-box-shadow:0 -3px 0 #3db294;
+  -moz-box-shadow:0 -3px 0 #3db294;
+  box-shadow:0 -3px 0 #3db294;
 }
 
 /*-------------- Clinic --------------*/
@@ -615,7 +660,13 @@ a.orange-btn{
   z-index:4;
   font-family: 'Glyphter';
   font-size:20px;
+  opacity:.8;
+  -webkit-transition:opacity .4s ease-in-out;
+  -moz-transition:opacity .4s ease-in-out;
+  transition:opacity .4s ease-in-out;
 }
+
+.clinic-slider-wrap a.slider-nav:hover{opacity:1;}
 
 .clinic-slider-wrap a.film_roll_prev{left:-45px;}
 
@@ -714,7 +765,13 @@ a.orange-btn{
   z-index:4;
   font-family: 'Glyphter';
   font-size:18px;
+  opacity:.6;
+  -webkit-transition:opacity .4s ease-in-out;
+  -moz-transition:opacity .4s ease-in-out;
+  transition:opacity .4s ease-in-out;
 }
+
+.doctors-slider-wrap a.slider-nav:hover{opacity:1;}
 
 .doctors-slider-wrap a.film_roll_prev{left:0;}
 
@@ -1024,6 +1081,18 @@ p.form-info{
   padding:0 27px;
   font:normal 16px/16px 'pf_agora_sans_probold';
   letter-spacing:2px;
+  -webkit-transition:background-color .4s ease-in-out;
+  -moz-transition:background-color .4s ease-in-out;
+  transition:background-color .4s ease-in-out;
+}
+
+.send-order-btn:hover{background-color:#63dcb8;}
+
+.send-order-btn:active{
+  background-color:#52c7a4;
+  -webkit-box-shadow:0 -3px 0 #2aa682;
+  -moz-box-shadow:0 -3px 0 #2aa682;
+  box-shadow:0 -3px 0 #2aa682;
 }
 
 /*---------------- Map ---------------*/
@@ -1095,6 +1164,7 @@ p.form-info{
   font:normal 56px/56px 'pf_agora_sans_probold';
   position:relative;
   top:-8px;
+  letter-spacing:2px;
 }
 
 .section-bottom-btn span[data-target="#reception-block"]{
@@ -1108,6 +1178,19 @@ p.form-info{
   padding:0 22px;
   height:45px;
   letter-spacing:3px;
+}
+
+.section-bottom-btn span[data-target="#reception-block"]:hover{
+  color:#33ced0;
+  background-color:#fff;
+}
+
+.section-bottom-btn span[data-target="#reception-block"]:active{
+  color:#33ced0;
+  background-color:#fff;
+  -webkit-box-shadow:0 -3px 0 #25b1b3;
+  -moz-box-shadow:0 -3px 0 #25b1b3;
+  box-shadow:0 -3px 0 #25b1b3;
 }
 
 footer{padding:80px 0;}
@@ -1166,7 +1249,7 @@ footer .item-2 ul li:first-child{padding-top:0;}
 footer .item-2 ul li.green, 
 footer .item-2 ul li a{
   color:#57c7a6;
-  font-weight:bold;
+  font-family: 'pf_agora_sans_probold';
   text-decoration:none;
 }
 
@@ -1196,7 +1279,12 @@ footer .item-3 ul li a{
   text-decoration:none;
   font-size:24px;
   line-height:48px;
+  -webkit-transition:background-color .4s ease-in-out;
+  -moz-transition:background-color .4s ease-in-out;
+  transition:background-color .4s ease-in-out;
 }
+
+footer .item-3 ul li a:hover{background-color:#63dcb8;}
 
 .foo-logo{
   float:left;
@@ -1244,4 +1332,6 @@ a.difiz-logo{
   background:transparent url('../img/difiz.png') no-repeat 0 0;
   text-indent:-9999px;
 }
+
+a.difiz-logo:hover{background-position:0 100%;}
 
