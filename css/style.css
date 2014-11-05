@@ -211,13 +211,13 @@ body{
 }
 
 .index-subtitle{
-  margin:0;
+  margin:0 200px;
   padding:0;
   text-align:center;
   font-size:24px;
   line-height:33px;
   font-family: 'pf_agora_sans_proregular';
-  letter-spacing"1px
+  letter-spacing:1px;
 }
 
 .film_roll_child img{max-width:none;}
@@ -236,7 +236,8 @@ header .section-inn{z-index:3;height:521px;}
 
 header .top-block{
   position:relative;
-  overflow:hidden;
+  display:table;
+  width:100%;
   clear:both;
   padding-top:50px;
   margin-bottom:105px;
@@ -251,6 +252,7 @@ header .top-block{
   padding-left:95px;
   font:normal 34px/80px 'pf_agora_sans_probold';
   letter-spacing:5px;
+  background:transparent url('../img/dent-top.png') no-repeat 27px 25px;
 }
 
 .top-logo:before{
@@ -266,12 +268,13 @@ header .top-block{
   -webkit-transition:.4s ease-in-out;
   -moz-transition:.4s ease-in-out;
   transition:.4s ease-in-out;
-}
+  -webkit-transform: rotate(0deg); 
+  transform: rotate(0deg); 
+} 
 
-.top-logo:hover:before{
-  -webkit-transform:rotate(360deg);
-  -moz-transform:rotate(360deg); 
-  transform:rotate(360deg);
+.top-logo:hover:before{ 
+  -webkit-transform: rotate(34deg); 
+  transform: rotate(34deg);
 }
 
 .top-block nav{
@@ -854,6 +857,8 @@ a.orange-btn{
 
 .contacts-block .top-block a.email{text-decoration:none;}
 
+.contacts-block .top-block a.email:hover{text-decoration:underline;}
+
 .contacts-block .top-block a.email:before{
   display:block;
   content:'';
@@ -884,6 +889,7 @@ a.orange-btn{
         -webkit-transform: translateX(-10px); 
     } 
     100% { 
+        opacity: 1;
         -webkit-transform: translateX(0); 
     } 
 } 
@@ -901,6 +907,7 @@ a.orange-btn{
         transform: translateX(-10px); 
     } 
     100% { 
+        opacity: 1;
         transform: translateX(0); 
     } 
 } 
@@ -1198,10 +1205,12 @@ footer .item-3 ul li a{
   padding:0 0 0 95px;
   margin-right:px;
   position:relative;
+  z-index:2;
   text-transform:uppercase;
   font:normal 34px/80px 'pf_agora_sans_probold';
   letter-spacing:5px;
   cursor:pointer;
+  background:transparent url('../img/dent-foo.jpg') no-repeat 26px 25px;
 }
 
 .foo-logo:before{
@@ -1210,19 +1219,21 @@ footer .item-3 ul li a{
   height:70px;
   content:'';
   position:absolute;
+  z-index:1;
   left:0;
   top:0;
   z-index:1;
-  background:transparent url('../img/stars-foo.jpg') no-repeat 0 0;
+  background:transparent url('../img/stars-foo.png') no-repeat 0 0;
   -webkit-transition:.4s ease-in-out;
   -moz-transition:.4s ease-in-out;
   transition:.4s ease-in-out;
-}
+  -webkit-transform: rotate(0deg); 
+  transform: rotate(0deg); 
+} 
 
-.foo-logo:hover:before{
-  -webkit-transform:rotate(360deg);
-  -moz-transform:rotate(360deg); 
-  transform:rotate(360deg);
+.foo-logo:hover:before{ 
+  -webkit-transform: rotate(34deg); 
+  transform: rotate(34deg);
 }
 
 a.difiz-logo{
