@@ -550,6 +550,7 @@ function pageInit(){
     var film_roll = new FilmRoll({
         container: '#reviews-slider',
         scroll: false,
+        interval: '1500',
         pager: false
     });
 
@@ -560,7 +561,7 @@ function pageInit(){
     var film_roll = new FilmRoll({
         container: '#clinic-slider',
         scroll: false,
-        interval: '500',
+        interval: '1200',
         pager: true
     });
 
@@ -578,6 +579,7 @@ function pageInit(){
     var film_roll = new FilmRoll({
         container: '#doctors-slider',
         scroll: false,
+        interval: '1500',
         pager: false
     });
 

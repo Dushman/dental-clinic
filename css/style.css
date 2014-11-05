@@ -290,7 +290,13 @@ header .top-block{
   font:normal 16px/16px 'pf_agora_sans_probold';
   margin-left:35px;
   letter-spacing:2px;
+  opacity:.8;
+  -webkit-transition:opacity .4s ease-in-out;
+  -moz-transition:opacity .4s ease-in-out;
+  transition:opacity .4s ease-in-out;
 }
+
+.top-block nav span:hover{opacity:1;}
 
 .top-block nav span:first-child{margin-left:0;}
 
