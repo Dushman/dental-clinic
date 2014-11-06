@@ -459,7 +459,7 @@ a.orange-btn:hover{
 
 a.orange-btn:active{
   color:#fff;
-  background-color:#f2771f;
+  background-color:#e46a13;
   border:none;
   line-height:54px;
   padding:0 29px;
@@ -570,11 +570,11 @@ a.orange-btn:active{
   display:block;
   content:'';
   text-indent:-9999px;
-  width:90%;
+  width:220px;
   margin-right:20px;
   height:15px;
   position:absolute;
-  left:0;
+  left:20px;
   top:0;
   z-index:2;
   background: rgba(255,255,255,1);
@@ -591,11 +591,11 @@ a.orange-btn:active{
   display:block;
   content:'';
   text-indent:-9999px;
-  width:90%;
+  width:220px;
   margin-right:20px;
   height:15px;
   position:absolute;
-  left:0;
+  left:20px;
   bottom:0;
   z-index:2;
   background: rgba(255,255,255,1);
@@ -695,7 +695,7 @@ a.orange-btn:active{
 
 .review-form .btn-wrap .send-btn:active{
   color:#5ed1af;
-  background-color:#fff;
+  background-color:#f2f2f2;
   line-height:50px;
   border:none;
   padding:0 42px;
@@ -1288,7 +1288,7 @@ p.form-info{
 
 .section-bottom-btn span[data-target="#reception-block"]:active{
   color:#33ced0;
-  background-color:#fff;
+  background-color:#f2f2f2;
   border:none;
   padding:0 24px;
   line-height:49px;
