@@ -95,7 +95,6 @@ function pageInit(){
         else {input.removeClass('valid').addClass('error');}   
     });
         
-
     $('.send-order-btn').click(function(e){
         var form_data = $('.order-form').serializeArray();
         var error_free = true;
