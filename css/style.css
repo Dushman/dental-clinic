@@ -361,7 +361,7 @@ header a.slider-nav{
   text-decoration:none;
   color:#fff;
   position:absolute;
-  bottom:50px;
+  bottom:55px;
   z-index:4;
   font-family: 'Glyphter';
   font-size:18px;
@@ -497,6 +497,7 @@ a.orange-btn:active{
   z-index:4;
   font-family: 'Glyphter';
   font-size:18px;
+  line-height:20px;
   opacity:.6;
   -webkit-transition:opacity .4s ease-in-out;
   -moz-transition:opacity .4s ease-in-out;
@@ -545,11 +546,11 @@ a.orange-btn:active{
 
 #reviews-slider .review-text{
   position:relative;
+  z-index:1;
   clear:both;
   display:block;
-  background-color:#fff;
   color:#8e9797;
-  padding:10px 5px 10px 20px;
+  padding:10px 20px;
   border-radius:5px;
   overflow-y:auto;
   overflow-x:hidden;
@@ -558,7 +559,56 @@ a.orange-btn:active{
   max-height:140px;
 }
 
-#reviews-slider div i{
+#reviews-slider .review-text-wrap{
+  position:relative;
+  overflow:hidden;
+  border-radius:5px;
+  background-color:#fff;
+}
+
+#reviews-slider .review-text-wrap:before{
+  display:block;
+  content:'';
+  text-indent:-9999px;
+  width:90%;
+  margin-right:20px;
+  height:15px;
+  position:absolute;
+  left:0;
+  top:0;
+  z-index:2;
+  background: rgba(255,255,255,1);
+  background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,.8) 50%, rgba(255,255,255,0) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,.8)), color-stop(50%, rgba(255,255,255,1)), color-stop(100%, rgba(255,255,255,0)));
+  background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,.8) 50%, rgba(255,255,255,0) 100%);
+  background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,.8) 50%, rgba(255,255,255,0) 100%);
+  background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,.8) 50%, rgba(255,255,255,0) 100%);
+  background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,.8) 50%, rgba(255,255,255,0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffff', endColorstr='#fff', GradientType=0 );
+}
+
+#reviews-slider .review-text-wrap:after{
+  display:block;
+  content:'';
+  text-indent:-9999px;
+  width:90%;
+  margin-right:20px;
+  height:15px;
+  position:absolute;
+  left:0;
+  bottom:0;
+  z-index:2;
+  background: rgba(255,255,255,1);
+  background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,.8) 50%, rgba(255,255,255,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,0)), color-stop(50%, rgba(255,255,255,.8)), color-stop(100%, rgba(255,255,255,1)));
+  background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,.8) 50%, rgba(255,255,255,1) 100%);
+  background: -o-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,.8) 50%, rgba(255,255,255,1) 100%);
+  background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,.8) 50%, rgba(255,255,255,1) 100%);
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,.8) 50%, rgba(255,255,255,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffff', endColorstr='#fff', GradientType=0 );
+}
+
+#reviews-slider div i.triangle{
   display:block;
   content:'';
   position:absolute;
@@ -670,10 +720,11 @@ a.orange-btn:active{
   text-decoration:none;
   color:#d5dadb;
   position:absolute;
-  top:185px;
+  top:183px;
   z-index:4;
   font-family: 'Glyphter';
   font-size:20px;
+  line-height:22px;
   opacity:.8;
   -webkit-transition:opacity .4s ease-in-out;
   -moz-transition:opacity .4s ease-in-out;
@@ -775,10 +826,11 @@ a.orange-btn:active{
   text-decoration:none;
   color:#fff;
   position:absolute;
-  top:65px;
+  top:63px;
   z-index:4;
   font-family: 'Glyphter';
   font-size:18px;
+  line-height:20px;
   opacity:.6;
   -webkit-transition:opacity .4s ease-in-out;
   -moz-transition:opacity .4s ease-in-out;

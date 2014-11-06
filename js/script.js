@@ -584,7 +584,9 @@ function pageInit(){
 
     var film_roll = new FilmRoll({
         container: '#top-slider-wrap',
-        scroll: false,
+        scroll: true,
+        interval: '8000',
+        animation: '2000',
         pager: false
     });
 
