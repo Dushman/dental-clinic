@@ -50,7 +50,7 @@ function pageInit(){
     $page.animate({scrollTop: y}, 'slow', 'swing');
   }
  
-  $body.on('click', '.foo-logo, footer .item-1 ul li, .top-block nav span, .to-r-btn', function(e){
+  $body.on('click', '.foo-logo, footer .item-1 ul li, .top-block nav span, .to-r-btn, .to-review-btn', function(e){
       e.preventDefault();
       scrollToPage($(this).attr('data-target'));
   });

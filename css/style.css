@@ -1018,9 +1018,7 @@ a.orange-btn:active{
   width:300px;
 }
 
-#reception-block .order-block{
-  overflow:hidden;
-}
+#reception-block .order-block{overflow:hidden;}
 
 p.form-info{
   font-size:16px;
@@ -1082,7 +1080,8 @@ p.form-info{
   height:180px;
 }
 
-.send-order-btn{
+.send-order-btn, 
+.to-review-btn{
   cursor:pointer;
   margin:0;
   text-transform:uppercase;
@@ -1099,13 +1098,46 @@ p.form-info{
   transition:background-color .4s ease-in-out;
 }
 
-.send-order-btn:hover{background-color:#63dcb8;}
+.send-order-btn:hover, 
+.to-review-btn:hover{background-color:#63dcb8;}
 
-.send-order-btn:active{
+.send-order-btn:active, 
+.to-review-btn:active{
   background-color:#52c7a4;
   -webkit-box-shadow:inset 0 3px 0 #2aa682;
   -moz-box-shadow:inset 0 3px 0 #2aa682;
   box-shadow:inset 0 3px 0 #2aa682;
+}
+
+.success-block{
+  overflow:hidden;
+  display:none;
+}
+
+.green{color:#5ed1af;}
+
+.success-content{
+  position:relative;
+  overflow:hidden;
+  clear:both;
+  padding-top:350px;
+  background:transparent url('../img/success-bg.png') no-repeat 50% 60px;
+}
+
+.success-title{
+  display:block;
+  clear:both;
+  color:#13283a;
+  font-weight:normal;
+  font-size:20px;
+  line-height:33px;
+  margin-bottom:15px;
+}
+
+.success-text{
+  font-size:16px;
+  line-height:27px;
+  margin:0 0 23px 0;
 }
 
 /*---------------- Map ---------------*/
@@ -1301,6 +1333,14 @@ footer .item-3 ul li a{
 }
 
 footer .item-3 ul li a:hover{background-color:#63dcb8;}
+
+footer .item-3 ul li a:active{
+  -webkit-box-shadow:inset 0 3px 0 #3db294;
+  -moz-box-shadow:inset 0 3px 0 #3db294;
+  box-shadow:inset 0 3px 0 #3db294;
+  text-shadow:0 3px 0 #3db294;
+  background-color:#5dc7a4;
+}
 
 .foo-logo{
   float:left;
