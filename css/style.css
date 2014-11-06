@@ -486,7 +486,7 @@ a.orange-btn:active{
   position:relative;
   overflow:hidden;
   clear:both;
-  padding:0 60px 85px 60px;
+  padding:0 60px;
 }
 
 .list-of-reviews-wrap a.slider-nav{
