@@ -1075,6 +1075,9 @@ p.form-info{
 .order-form input.error, 
 .order-form textarea.error{border-color:#ed4c40;}
 
+.order-form input.valid, 
+.order-form textarea.valid{border-color:#5ed1af;}
+
 .order-form textarea{
   resize:none;
   height:180px;

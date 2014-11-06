@@ -2,76 +2,121 @@ $(pageInit);
 
 function pageInit(){
 
-  function initialize() {
-    var myLatlng = new google.maps.LatLng(47.014454,28.84);
-    var pointMyLatlng = new google.maps.LatLng(47.014354,28.855715);
-    var mapOptions = {
-      zoom: 15,
-      center: myLatlng,
-      disableDefaultUI: true,
-      scrollwheel: false
-    }
-    var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
-
-    var marker = new google.maps.Marker({
-        position: pointMyLatlng,
-        map: map,
-        icon: './img/point.png',
-        title: '"Stele"'
-    });
-  }
-
-  google.maps.event.addDomListener(window, 'load', initialize);
-
-  var $this = $('.map-info');
-  if(!$this.length) return;
-
-  function paddingLeft(){
-    var windowWidth = $(window).width();
-    var data = (windowWidth - 960) / 2;
-    if (windowWidth <= 1600) {$this.css('padding-left' , data + 'px')}
-    else {$this.css('padding-left' , '320px')}  
-  }
-
-  paddingLeft();
-
-  $(window).resize(paddingLeft);
-
-  $('.top-logo').click(function(){window.location.reload()});
-
-  var $page = $('html,body'),
-      $body = $('body');
-
-  function scrollToPage(target) {
-    var y = 0;
-    if (target && $(target).length) {
-      y = $(target).offset().top;
-    }
-    $page.animate({scrollTop: y}, 'slow', 'swing');
-  }
- 
-  $body.on('click', '.foo-logo, footer .item-1 ul li, .top-block nav span, .to-r-btn, .to-review-btn', function(e){
-      e.preventDefault();
-      scrollToPage($(this).attr('data-target'));
-  });
-
-  function tipaValidation(e){
-    var $field = $('.order-form input, .order-form textarea');
-    e.preventDefault();
-    $field.each(function(){
-        if (!this.value){
-            $(this).addClass('error');
-        } else{
-            $(this).removeClass('error');
+    function initialize() {
+        var myLatlng = new google.maps.LatLng(47.014454,28.84);
+        var pointMyLatlng = new google.maps.LatLng(47.014354,28.855715);
+        var mapOptions = {
+          zoom: 15,
+          center: myLatlng,
+          disableDefaultUI: true,
+          scrollwheel: false
         }
-    });    
-  }
 
-  $('.send-order-btn').click(tipaValidation);
+        var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
 
+        var marker = new google.maps.Marker({
+            position: pointMyLatlng,
+            map: map,
+            icon: './img/point.png',
+            title: '"Stele"'
+        });
+    }
+
+    google.maps.event.addDomListener(window, 'load', initialize);
+
+    var $this = $('.map-info');
+    if(!$this.length) return;
+
+    function paddingLeft(){
+        var windowWidth = $(window).width();
+        var data = (windowWidth - 960) / 2;
+        if (windowWidth <= 1600) {$this.css('padding-left' , data + 'px')}
+        else {$this.css('padding-left' , '320px')}  
+    }
+
+    paddingLeft();
+
+    $(window).resize(paddingLeft);
+
+    $('.top-logo').click(function(){window.location.reload()});
+
+    var $page = $('html,body'),
+        $body = $('body');
+
+    function scrollToPage(target) {
+        var y = 0;
+        if (target && $(target).length) {
+            y = $(target).offset().top;
+        }
+        $page.animate({scrollTop: y}, 'slow', 'swing');
+    }
+     
+    $body.on('click', '.foo-logo, footer .item-1 ul li, .top-block nav span, .to-r-btn, .to-review-btn', function(e){
+        e.preventDefault();
+        scrollToPage($(this).attr('data-target'));
+    });
+
+    //Form---------------------------------------------------
+
+    $('#order-first-name').on('input', function() {
+        var input = $(this);
+        var is_name = input.val();
+        if (is_name) {input.removeClass('error').addClass('valid');}
+        else {input.removeClass('valid').addClass('error');}
+    });
+
+    $('#order-last-name').on('input', function() {
+        var input = $(this);
+        var is_name = input.val();
+        if (is_name) {input.removeClass('error').addClass('valid');}
+        else {input.removeClass('valid').addClass('error');}
+    });
+
+    $('#order-phone').on('input', function() {
+        var input = $(this);
+        var re = /^[0-9\-\+]{8,15}$/;
+        var is_phone = re.test(input.val());
+        if (is_phone) {input.removeClass('error').addClass('valid');}
+        else {input.removeClass('valid').addClass('error');}
+    });
+
+    $('#order-email').on('input', function() {
+        var input = $(this);
+        var re = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
+        var is_email = re.test(input.val());
+        if (is_email) {input.removeClass('error').addClass('valid');}
+        else {input.removeClass('valid').addClass('error');}
+    });
+            
+    $('#order-message').keyup(function(event) {
+        var input = $(this);
+        var message = $(this).val();
+        if (message) {input.removeClass('error').addClass('valid');}
+        else {input.removeClass('valid').addClass('error');}   
+    });
+        
+
+    $('.send-order-btn').click(function(e){
+        var form_data=$('.order-form').serializeArray();
+        var error_free=true;
+        for (var input in form_data){
+            var element=$('#order-' + form_data[input]['name']);
+            var valid=element.hasClass('valid');
+            if (!valid){element.addClass('error'); error_free = false;}
+            else {element.removeClass('error');}
+        }
+        if (!error_free){
+            e.preventDefault(); 
+        } else{
+            e.preventDefault(); 
+            $('.order-block').hide();
+            $('.success-block').fadeIn('slow');
+        }
+    });
+        
   //Slider---------------------------------------------------
 
-  var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
+    var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
     (function($) {
         this.FilmRoll = (function() {
         function FilmRoll(options) {
