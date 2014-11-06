@@ -97,11 +97,11 @@ function pageInit(){
         
 
     $('.send-order-btn').click(function(e){
-        var form_data=$('.order-form').serializeArray();
-        var error_free=true;
+        var form_data = $('.order-form').serializeArray();
+        var error_free = true;
         for (var input in form_data){
-            var element=$('#order-' + form_data[input]['name']);
-            var valid=element.hasClass('valid');
+            var element = $('#order-' + form_data[input]['name']);
+            var valid = element.hasClass('valid');
             if (!valid){element.addClass('error'); error_free = false;}
             else {element.removeClass('error');}
         }
