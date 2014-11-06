@@ -361,10 +361,11 @@ header a.slider-nav{
   text-decoration:none;
   color:#fff;
   position:absolute;
-  bottom:60px;
+  bottom:50px;
   z-index:4;
   font-family: 'Glyphter';
   font-size:18px;
+  line-height:20px;
   opacity:.6;
   -webkit-transition:opacity .4s ease-in-out;
   -moz-transition:opacity .4s ease-in-out;

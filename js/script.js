@@ -3,7 +3,7 @@ $(pageInit);
 function pageInit(){
 
     function initialize() {
-        var myLatlng = new google.maps.LatLng(47.014454,28.84);
+        var myLatlng = new google.maps.LatLng(47.014454,28.846);
         var pointMyLatlng = new google.maps.LatLng(47.014354,28.855715);
         var mapOptions = {
           zoom: 15,
